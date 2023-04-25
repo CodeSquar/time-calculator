@@ -1,0 +1,113 @@
+
+.calculator-container{
+    --side-margin-container:16px;
+    margin: 64px var(--side-margin-container);
+    width: 100%;
+    max-width: 700px;
+    --container-padding:64px;
+    padding: var(--container-padding);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 32px;
+}
+.title{
+    --title-size:40px;
+    font-size:var(--title-size);
+    font-weight: 900;
+   text-align:center;
+   margin-bottom: 16px;
+}
+.description{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.60);
+
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.selection-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 64px;
+    width: 100%;
+}
+.selection-container  > label{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.60);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+.selection-container input[type="time"]{
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+    width: 100%;
+
+}
+.selection-container input[type="time"]::-webkit-calendar-picker-indicator{
+    filter: invert(100%) 
+  }
+.separator{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 1px;
+    margin-top: 32px;
+}
+.result-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+margin-top: 32px;
+gap: 16px;
+}
+.result-container button{
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #9083ED;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+.result-container button:hover{
+    opacity: 0.6;
+}
+.result-container p{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+.result-container p span{
+    font-weight: 700;
+}
+@media (max-width:568px) {
+    .calculator-container{
+        border-radius: 0px;
+        padding: calc(0.5 * var(--container-padding));
+        --side-margin-container:0px;
+        
+    }
+    .title{
+        font-size: calc(0.8 * var(--title-size));
+    }
+    .selection-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
